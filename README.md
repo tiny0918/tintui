@@ -5,8 +5,8 @@
 ![npm](https://img.shields.io/npm/v/tintui)
 ![npm bundle size](https://img.shields.io/bundlephobia/min/tintui)
 ![npm](https://img.shields.io/npm/dt/tintui)
-[![Build Status](https://travis-ci.com/tiny0918/tintui.svg?branch=master)](https://travis-ci.com/yehuozhili/tintui)
-[![Coverage Status](https://coveralls.io/repos/github/tiny0918/tintui/badge.svg?branch=master)](https://coveralls.io/github/yehuozhili/tintui?branch=master)
+[![Build Status](https://travis-ci.com/tiny0918/tintui.svg?branch=master)](https://travis-ci.com/tiny0918/tintui)
+[![Coverage Status](https://coveralls.io/repos/github/tiny0918/tintui/badge.svg?branch=master)](https://coveralls.io/github/tiny0918/tintui?branch=master)
 
 ## 安装
 
