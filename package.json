@@ -1,6 +1,6 @@
 {
   "name": "tintui",
-  "version": "1.0.5",
+  "version": "1.0.6",
   "description": "React components library",
   "author": "tiny",
   "private": false,
@@ -35,17 +35,16 @@
   },
   "scripts": {
     "clean": "rimraf ./dist",
-    "lint": "eslint --ext js,ts,tsx src --max-warnings 5",
+    "lint": "eslint --ext js,ts,tsx src",
     "build": "npm run clean && npm run build-ts && npm run build-css",
     "test": "react-scripts test",
     "test:nowatch": "cross-env CI=true react-scripts test",
-    "coverage": "react-scripts test --coverage --watchAll=false",
-    "coverall": "npm run coverage  && cat ./coverage/lcov.info | ./node_modules/coveralls/bin/coveralls.js && rm -rf ./coverage",
+    "storybook": "start-storybook -p 9009 -s public --docs",
+    "storybook-nodoc": "start-storybook -p 9009 -s public",
+    "build-storybook": "build-storybook --no-dll --quiet --docs",
     "build-ts": "tsc -p tsconfig.build.json",
     "build-css": "node-sass ./src/styles/index.scss ./dist/index.css",
-    "storybook": "start-storybook -p 9009 -s public",
-    "build-storybook": "build-storybook -s public",
-    "prepublishOnly": "npm run test:nowatch && npm run lint && npm run build"
+    "prepublishOnly": "npm run test:nowatch & npm run lint & npm run build"
   },
   "husky": {
     "hooks": {
@@ -69,11 +68,12 @@
   },
   "devDependencies": {
     "@storybook/addon-actions": "^5.3.18",
-    "@storybook/addon-info": "^5.3.18",
+    "@storybook/addon-docs": "^5.3.18",
     "@storybook/addon-links": "^5.3.18",
+    "@storybook/addon-viewport": "^5.3.19",
     "@storybook/addons": "^5.3.18",
     "@storybook/preset-create-react-app": "^2.1.1",
-    "@storybook/react": "^5.3.18",
+    "@storybook/react": "5.3.18",
     "@testing-library/jest-dom": "^4.2.4",
     "@testing-library/react": "^9.3.2",
     "@types/classnames": "^2.2.9",
@@ -91,6 +91,13 @@
     "react-dom": "^16.12.0",
     "react-scripts": "3.2.0",
     "rimraf": "^3.0.1",
-    "typescript": "3.7.2"
-  }
+    "typescript": "3.7.2",
+    "webpack-bundle-analyzer": "^3.7.0"
+  },
+  "jest": {
+    "collectCoverageFrom": [
+      "!src/**/*.example.tsx"
+    ]
+  },
+  "sideEffects": false
 }
