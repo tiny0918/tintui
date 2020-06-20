@@ -2,6 +2,11 @@
 
 轻量级react ui库
 
+![npm](https://img.shields.io/npm/v/tintui)
+![npm bundle size](https://img.shields.io/bundlephobia/min/tintui)
+![npm](https://img.shields.io/npm/dt/tintui)
+[![Build Status](https://www.travis-ci.org/tiny0918/tintui.svg?branch=master)](https://www.travis-ci.org/github/tiny0918/tintui)
+
 ## 安装
 
 ~~~javascript
