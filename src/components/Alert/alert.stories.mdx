@@ -1,0 +1,40 @@
+import { action } from '@storybook/addon-actions'
+
+import Alert from './alert'
+import { Meta, Story, Props ,Preview } from '@storybook/addon-docs/blocks';
+
+<Meta title='DISPLAY |Alert' component={Alert} />
+
+<br/>
+# Alert
+<br/>
+
+## 不同类型的 Alert
+
+<Preview >
+  <Story name='default' >
+    <Alert title="this is alert!"></Alert>
+  </Story>
+  <Story name='success'  >
+    <Alert title="this is Success" type="success"></Alert>
+  </Story>
+  <Story name='danger'>
+    <Alert title="this is Danger!" type="danger"></Alert>
+  </Story>
+  <Story name='warning'>
+    <Alert title="this is Warning!" type="warning" closable={false}></Alert>
+  </Story>
+</Preview>
+
+## 添加描述的 Alert
+
+
+<Preview>
+  <Story name='default-lg' >
+    <Alert title="提示标题欧亲" description="this is a long description" onClose={action('closed')}></Alert>
+  </Story>
+</Preview>
+
+## 属性详情 
+
+<Props of={Alert} />

@@ -94,10 +94,5 @@
     "typescript": "3.7.2",
     "webpack-bundle-analyzer": "^3.7.0"
   },
-  "jest": {
-    "collectCoverageFrom": [
-      "!src/**/*.example.tsx"
-    ]
-  },
   "sideEffects": false
 }

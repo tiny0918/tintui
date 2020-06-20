@@ -18,13 +18,13 @@ addParameters({
       withStoriesOnly: true,
       hideEmpty: true,
   }
-})
+});
 
 const loaderFn = () => {
   return [
-    require('../src/welcome.stories.tsx'),
-    require('../src/components/Button/button.stories.tsx'),
-    require('../src/components/Alert/alert.stories.tsx'),
+    require('../src/stories/Welcome.stories.mdx'),
+    require('../src/components/Button/button.stories.mdx'),
+    require('../src/components/Alert/alert.stories.mdx'),
     require('../src/components/Menu/menu.stories.tsx'),
     require('../src/components/Tabs/tabs.stories.tsx'),
     require('../src/components/Icon/icon.stories.tsx'),
@@ -33,7 +33,7 @@ const loaderFn = () => {
     require('../src/components/Select/select.stories.tsx'),
     require('../src/components/Upload/upload.stories.tsx'),
   ]
-}
+};
 
 
 // automatically import all files ending in *.stories.js
