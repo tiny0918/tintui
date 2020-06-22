@@ -11,10 +11,10 @@ interface GithubUserProps {
   avatar_url: string;
 }
 
-const lakers = ['bradley', 'pope', 'caruso', 'cook', 'cousins',
-  'james', 'AD', 'green', 'howard', 'kuzma', 'McGee', 'rando']
+const city = ['hefei', 'nanjing', 'beijing', 'shanghai', 'guangzhou',
+  'hangzhou', 'xian', 'zhenzhou', 'kunming', 'shenyang', 'tianjing', 'wuhan']
 const handleFetch1 = (query: string) => {
-    return lakers.filter(name => name.includes(query)).map(name => ({value: name}))
+    return city.filter(name => name.includes(query)).map(name => ({value: name}))
   }
 
 const AutocompleteExample = () => {
@@ -22,42 +22,39 @@ const AutocompleteExample = () => {
 		<AutoComplete 
 		  fetchSuggestions={handleFetch1}
 		  onSelect={action('selected')}
-		  placeholder="输入湖人队球员英文名试试"
+		  placeholder="输入省会城市首字母试试"
 		/>
 	  )
 };
 export default AutocompleteExample;
 
-const lakersWithNumber = [
-    {value: 'bradley', number: 11},
-    {value: 'pope', number: 1},
-    {value: 'caruso', number: 4},
-    {value: 'cook', number: 2},
-    {value: 'cousins', number: 15},
-    {value: 'james', number: 23},
-    {value: 'AD', number: 3},
-    {value: 'green', number: 14},
-    {value: 'howard', number: 39},
-    {value: 'kuzma', number: 0},
+const citysWithNumber = [
+	{value: 'hefei', number: '安徽-合肥'},
+	  {value: 'nanjing', number: '江苏-南京'},
+	  {value: 'beijing', number: '北京-北京'},
+	  {value: 'shanghai', number: '上海-上海'},
+	  {value: 'guangzhou', number: '广东-广州'},
+	  {value: 'hangzhou', number: '浙江-杭州'},
+	  {value: 'xian', number: '陕西-西安'},
+	  {value: 'zhenzhou', number: '深圳-深圳'},
+	  {value: 'kunming', number: '云南-昆明'},
+	  {value: 'shenyang', number: '辽宁-沈阳'}
   ] 
   const handleFetch2 = (query: string) => {
-    return lakersWithNumber.filter(player => player.value.includes(query))
-  }
-  const renderOption2 = (item: DataSourceType) => {
-    const itemWithNumber = item as DataSourceType<LakerPlayerProps>
-    return (
-      <>
-        <b>名字: {itemWithNumber.value}</b>
-        <span>球衣号码: {itemWithNumber.number}</span>
-      </>
-    )
-  }
+	  return citysWithNumber.filter(city => city.value.includes(query))
+	}
+	const renderOption2 = (item: DataSourceType) => {
+	  const itemWithNumber = item as DataSourceType<LakerPlayerProps>
+	  return (
+		  <span>{itemWithNumber.number}</span>
+	  )
+	}
 const ToUseTemplete = () => {
 	return (
 		<AutoComplete 
 		  fetchSuggestions={handleFetch2}
 		  onSelect={action('selected')}
-		  placeholder="输入湖人队球员英文,自定义下拉模版"
+		  placeholder="输入省会城市首字母，自定义下拉模板"
 		  renderOption={renderOption2}
 		/>
 	  )
