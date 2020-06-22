@@ -8,8 +8,11 @@ import UploadExample from './upload.example'
 <Meta title='TintUI|Upload' component={Upload} />
 
 # Upload
-
-<br/>
+通过点击或者拖拽上传文件
+### 引用方法
+~~~js
+import { Upload } from 'tintui'
+~~~
 
 ## 默认上传
 
@@ -28,8 +31,7 @@ import UploadExample from './upload.example'
 </Preview>
 
 ## 上传前检查文件大小
-
-
+### 示例代码
 ```jsx
 const checkFileSize = (file: File) => {
   if (Math.round(file.size / 1024) > 50) {

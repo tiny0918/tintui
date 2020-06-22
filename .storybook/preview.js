@@ -38,6 +38,4 @@ const loaderFn = () => {
   ]
 };
 
-
-// automatically import all files ending in *.stories.js
 configure(loaderFn, module);

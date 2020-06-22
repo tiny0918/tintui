@@ -6,10 +6,17 @@ import AutocompleteExample,{ToUseTemplete,AsyncTest} from './autoComplete.exampl
 <Meta title='TintUI|AutoComplete' component={AutoComplete} />
 
 # AutoComplete 自动补全
+输入框自动完成功能。当输入值需要自动完成时使用，支持同步和异步两种方式
+支持 Input 组件的所有属性 支持键盘事件选择
+### 引用方法
+~~~js
+import { AutoComplete } from 'tintui'
+~~~
 
 <br/>
 
-
+## 基本
+### 示例代码
 ```jsx
 const city = ['hefei', 'nanjing', 'beijing', 'shanghai', 'guangzhou',
   'hangzhou', 'xian', 'zhenzhou', 'kunming', 'shenyang', 'tianjing', 'wuhan']
@@ -25,7 +32,6 @@ return (
 )
 ```
 
-
 <Preview>
 <Story name='AutoComplete'> 
     <div style={{height:'300px'}}>
@@ -34,11 +40,8 @@ return (
 </Story>
 </Preview>
 
-
-
 ## 自定义模板
-
-
+### 示例代码
 ```jsx
 const citysWithNumber = [
   {value: 'hefei', number: '安徽-合肥'},
@@ -80,7 +83,7 @@ return (
 </Preview>
 
 ## 支持异步
-
+### 示例代码
 ```jsx
 const handleFetch = (query: string) => {
   return fetch('https://api.github.com/search/users?q='+ query)
@@ -109,7 +112,6 @@ return (
 )
 ```
 
-
 <Preview>
 <Story name='AutoComplete async'> 
     <div style={{height:'300px'}}>
@@ -117,7 +119,6 @@ return (
     </div>
 </Story>
 </Preview>
-
 
 <br/>
 
