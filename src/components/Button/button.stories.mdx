@@ -9,7 +9,7 @@ import  Button  from './button';
 
 <br/>
 
-## 按钮类型 btnType
+## 不同类型的 Button
 
 <Preview >
   <Story name='default' >
@@ -21,44 +21,91 @@ import  Button  from './button';
   <Story name='danger'>
     <Button btnType='danger'>danger</Button>
   </Story>
+  <Story name='warning'>
+    <Button btnType='warning'>warning</Button>
+  </Story>
+  <Story name='success'>
+    <Button btnType='success'>success</Button>
+  </Story>
+  <Story name='info'>
+    <Button btnType='info'>info</Button>
+  </Story>
   <Story name='link'>
     <Button btnType='link'>link</Button>
   </Story>
 </Preview>
 
-## 按钮大小 size
+## 不同大小的 Button
 
 
 <Preview>
   <Story name='default-lg' >
-    <Button btnType='default' size='lg' >default</Button>
+    <div>
+      <Button btnType='default'  size='lg'>default-lg</Button>
+      <Button btnType='default'  size='sm'>default-small</Button>
+    </div>
   </Story>
-  <Story name='primary-lg' >
-    <Button btnType='primary' size='lg'>primary</Button>
+  <Story name='primary-lg'  >
+   <div>
+    <Button btnType='primary' size='lg'>primary-lg</Button>
+    <Button btnType='primary' size='sm'>primary-small</Button>
+    </div>
   </Story>
-  <Story name='default-sm' >
-    <Button btnType='default' size='sm' >default</Button>
+  <Story name='danger-lg'>
+   <div>
+    <Button btnType='danger' size='lg'>danger-lg</Button>
+    <Button btnType='danger' size='sm'>danger-small</Button>
+    </div>
   </Story>
-  <Story name='primary-sm' >
-    <Button btnType='primary' size='sm'>primary</Button>
+  <Story name='warning-lg'>
+   <div>
+    <Button btnType='warning' size='lg'>warning-lg</Button>
+    <Button btnType='warning' size='sm'>warning-small</Button>
+    </div>
+  </Story>
+  <Story name='success-lg'>
+   <div>
+    <Button btnType='success' size='lg'>success-lg</Button>
+    <Button btnType='success' size='sm'>success-small</Button>
+    </div>
+  </Story>
+  <Story name='info-lg'>
+   <div>
+    <Button btnType='info' size='lg'>info-lg</Button>
+    <Button btnType='info' size='sm'>info-small</Button>
+    </div>
+  </Story>
+  <Story name='link-lg'>
+   <div>
+    <Button btnType='link' size='lg'>link-lg</Button>
+    <Button btnType='link' size='sm'>link-small</Button>
+    </div>
   </Story>
 </Preview>
 
 
-## 禁用样式 disabled
-
+## 禁用样式的 Button
 
 <Preview>
-  <Story name='defaultd' >
-    <Button btnType='default' disabled >default</Button>
+ <Story name='default-disabled' >
+    <Button btnType='default'  disabled>default</Button>
   </Story>
-  <Story name='primaryd' >
+  <Story name='primary-disabled'  >
     <Button btnType='primary' disabled>primary</Button>
   </Story>
-  <Story name='dangerd'>
+  <Story name='danger-disabled'>
     <Button btnType='danger' disabled>danger</Button>
   </Story>
-   <Story name='linkd'>
+  <Story name='warning-disabled'>
+    <Button btnType='warning' disabled>warning</Button>
+  </Story>
+  <Story name='success-disabled'>
+    <Button btnType='success' disabled>success</Button>
+  </Story>
+  <Story name='info-disabled'>
+    <Button btnType='info' disabled>info</Button>
+  </Story>
+  <Story name='link-disabled'>
     <Button btnType='link' disabled>link</Button>
   </Story>
 </Preview>
