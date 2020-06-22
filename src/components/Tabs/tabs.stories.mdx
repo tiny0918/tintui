@@ -1,0 +1,57 @@
+import { action } from '@storybook/addon-actions'
+import { Meta, Story, Props ,Preview } from '@storybook/addon-docs/blocks';
+import Tabs from './tabs'
+import TabItem from './tabItem'
+import Icon from '../Icon'
+
+<Meta title='TintUI|Tabs' component={Tabs} />
+
+<br/>
+
+# Tabs
+
+<br/>
+
+## 默认样式的Tabs
+
+<Preview >
+  <Story name='defaultTabs' >
+    <Tabs onSelect={action('selected')}>
+      <TabItem label="tab1">this is content one</TabItem>
+      <TabItem label="tab2">this is content two</TabItem>
+      <TabItem label="tab3">this is content three</TabItem>
+    </Tabs>
+  </Story>
+</Preview>
+
+## 选项卡样式的Tabs
+
+
+<Preview>
+  <Story name='selectTab' >
+    <Tabs onSelect={action('selected')} type="card">
+      <TabItem label='card1'>this is card one</TabItem>
+      <TabItem label="card2">this is content two</TabItem>
+      <TabItem label="card3" disabled>this is content three</TabItem>
+    </Tabs> 
+  </Story>
+</Preview>
+
+## 自定义选项卡样式
+
+
+<Preview>
+  <Story name='customSelectTabs' >
+    <Tabs onSelect={action('selected')} type="card">
+      <TabItem 
+        label={<React.Fragment><Icon icon="check-circle" />tab1</React.Fragment>}>
+        this is card one
+      </TabItem>
+      <TabItem label="tab2">this is content two</TabItem>
+    </Tabs> 
+  </Story>
+</Preview>
+
+## 属性详情 
+
+<Props of={Tabs} />

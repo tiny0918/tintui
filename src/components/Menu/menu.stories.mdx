@@ -1,9 +1,22 @@
-import React from 'react'
-import { storiesOf } from '@storybook/react'
+import { Meta, Story, Props ,Preview } from '@storybook/addon-docs/blocks';
 import { action } from '@storybook/addon-actions'
 import Menu from './index'
 
-export const defaultMenu = () => (
+<Meta title='TintUI|Menu' component={Menu} />
+
+<br/>
+
+# Menu
+
+<br/>
+
+
+
+## 横向的Menu
+
+
+<Preview >
+  <Story name='default' >
   <Menu defaultIndex='0' onSelect={action('selected!')} >
     <Menu.Item>
       cool link
@@ -23,8 +36,14 @@ export const defaultMenu = () => (
       </Menu.Item>    
     </Menu.SubMenu>
   </Menu>
-)
-export const clickMenu = () => (
+  </Story>
+</Preview>
+
+## 纵向的 Menu
+
+
+<Preview>
+  <Story name='default-lg' >
   <Menu defaultIndex='0' onSelect={action('selected!')} mode="vertical">
     <Menu.Item>
       cool link
@@ -41,8 +60,15 @@ export const clickMenu = () => (
       </Menu.Item>    
     </Menu.SubMenu>
   </Menu>
-)
-export const openedMenu = () => (
+  </Story>
+</Preview>
+
+
+## 默认展开的纵向 Menu
+
+
+<Preview>
+  <Story name='defaultd' >
   <Menu defaultIndex='0' onSelect={action('selected!')} mode="vertical" defaultOpenSubMenus={['2']}>
     <Menu.Item>
       cool link
@@ -59,9 +85,13 @@ export const openedMenu = () => (
       </Menu.Item>    
     </Menu.SubMenu>
   </Menu>
-)
+  </Story>
+</Preview>
 
-storiesOf('Menu', module)
-.add('横向的Menu', defaultMenu )
-.add('纵向的 Menu', clickMenu)
-.add('默认展开的纵向 Menu', openedMenu)
+
+
+## 属性详情 
+
+<Props of={Menu} />
+
+

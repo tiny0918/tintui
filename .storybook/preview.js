@@ -2,6 +2,9 @@ import "../src/styles/index.scss";
 import { create } from "@storybook/theming";
 import { addParameters, configure } from "@storybook/react";
 import { DocsPage, DocsContainer } from "@storybook/addon-docs/blocks";
+import { library } from '@fortawesome/fontawesome-svg-core'
+import { fas } from '@fortawesome/free-solid-svg-icons'
+library.add(fas)
 addParameters({
 	docs: {
 		container: DocsContainer,
@@ -25,13 +28,13 @@ const loaderFn = () => {
     require('../src/stories/Welcome.stories.mdx'),
     require('../src/components/Button/button.stories.mdx'),
     require('../src/components/Alert/alert.stories.mdx'),
-    require('../src/components/Menu/menu.stories.tsx'),
-    require('../src/components/Tabs/tabs.stories.tsx'),
-    require('../src/components/Icon/icon.stories.tsx'),
-    require('../src/components/Input/input.stories.tsx'),
-    require('../src/components/AutoComplete/autoComplete.stories.tsx'),
-    require('../src/components/Select/select.stories.tsx'),
-    require('../src/components/Upload/upload.stories.tsx'),
+    require('../src/components/Menu/menu.stories.mdx'),
+    require('../src/components/Tabs/tabs.stories.mdx'),
+    require('../src/components/Icon/icon.stories.mdx'),
+    require('../src/components/Input/input.stories.mdx'),
+    require('../src/components/AutoComplete/autoComplete.stories.mdx'),
+    require('../src/components/Select/select.stories.mdx'),
+    require('../src/components/Upload/upload.stories.mdx'),
   ]
 };
 

@@ -1,0 +1,72 @@
+import { action } from '@storybook/addon-actions'
+import { Meta, Story, Props ,Preview } from '@storybook/addon-docs/blocks';
+import { Input } from './input'
+
+<Meta title='TintUI|Input' component={Input} />
+
+<br/>
+
+# Input
+
+<br/>
+
+## 基本Input
+
+<Preview >
+  <Story name='defaultInput' >
+    <div>
+    <Input
+      placeholder="漂亮的 Input"
+      onChange={action('changed')}
+    />
+    <Input
+      placeholder="disabled input"
+      disabled 
+    />
+    <Input
+    placeholder="input with icon"
+    icon="search"
+  /> 
+    </div>
+  </Story>
+</Preview>
+
+## 大小不同的 Input
+
+
+<Preview>
+  <Story name='large size' >
+    <div>
+    <Input
+        defaultValue="large size"
+        size="lg"
+      />
+    <Input
+        placeholder="small size"
+        size="sm"
+      />
+    </div>
+  </Story>
+</Preview>
+
+## 带前后缀的 Input
+
+
+<Preview>
+  <Story name='prepend-input' >
+    <div>
+      <Input
+          defaultValue="prepend text"
+          prepend="https://"
+        />
+      <Input
+          defaultValue="google"
+          append=".com"
+        />
+    </div>
+  </Story>
+</Preview>
+
+## 属性详情 
+
+<Props of={Input} />

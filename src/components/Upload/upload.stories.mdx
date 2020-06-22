@@ -1,0 +1,82 @@
+import { Meta, Story, Props ,Preview } from '@storybook/addon-docs/blocks';
+import { action } from '@storybook/addon-actions'
+import { Upload } from './upload'
+import Button from '../Button/button'
+import Icon from '../Icon/icon'
+import UploadExample from './upload.example'
+
+<Meta title='TintUI|Upload' component={Upload} />
+
+<br/>
+
+# Upload
+
+<br/>
+
+## 默认上传
+
+<Preview>
+  <Story name='AutoComplete'> 
+    <Upload
+        action="https://www.mocky.io/v2/5cc8019d300000980a055e76"
+        onChange={action('changed')}
+        onSuccess={action('success')}
+        onProgress={action('progress')}
+        onRemove={action('removed')}
+      >
+        <Button size="lg" btnType="primary"><Icon icon="upload" /> 点击上传 </Button>
+      </Upload>
+  </Story>
+</Preview>
+
+## 上传前检查文件大小
+
+
+```jsx
+const checkFileSize = (file: File) => {
+  if (Math.round(file.size / 1024) > 50) {
+    alert('file too big')
+    return false;
+  }
+  return true;
+}
+return (
+  <Upload
+    action="https://www.mocky.io/v2/5cc8019d300000980a055e76"
+    onChange={action('changed')}
+    beforeUpload={checkFileSize}
+  >
+    <Button size="lg" btnType="primary"><Icon icon="upload" /> 不能传大于50Kb！ </Button>
+  </Upload>  
+)
+```
+
+<Preview>
+<Story name='AutoComplete2'> 
+  <UploadExample/>
+</Story>
+</Preview>
+
+## 拖动上传
+
+<Preview>
+  <Story name='AutoComplete async'> 
+    <Upload
+        action="https://www.mocky.io/v2/5cc8019d300000980a055e76"
+        onChange={action('changed')}
+        onRemove={action('removed')}
+        name="fileName"
+        multiple
+        drag
+      >
+        <Icon icon="upload" size="5x" theme="secondary" />
+        <br/>
+        <p>点击或者拖动到此区域进行上传</p>
+    </Upload>
+  </Story>
+</Preview>
+
+
+## 属性详情 
+
+<Props of={Upload} />
