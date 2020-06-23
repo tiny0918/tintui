@@ -1,7 +1,8 @@
 import { action } from '@storybook/addon-actions'
 import { Meta, Story, Props ,Preview } from '@storybook/addon-docs/blocks';
 
-import Select from './index'
+import Select from './select'
+import Option from './option'
 
 <Meta title='TintUI|Select' component={Select} />
 
@@ -17,17 +18,19 @@ import { Select } from 'tintui'
 
 <Preview >
   <Story name='default-select' >
+    <div style={{height:'300px'}}>
     <Select
       placeholder="请选择"
       onChange={action('changed')}
       onVisibleChange={action('visible')}
     >
-      <Select.Option value="nihao" />
-      <Select.Option value="nihao2" />
-      <Select.Option value="nihao3" />
-      <Select.Option value="disabled" disabled/>
-      <Select.Option value="nihao5" />
+      <Option value="nihao" />
+      <Option value="nihao2" />
+      <Option value="nihao3" />
+      <Option value="disabled" disabled/>
+      <Option value="nihao5" />
     </Select>
+    </div>
   </Story>
 </Preview>
 
@@ -36,18 +39,20 @@ import { Select } from 'tintui'
 
 <Preview>
   <Story name='multiple-select' >
+    <div style={{height:'300px'}}>
     <Select
         placeholder="支持多选欧！"
         onChange={action('changed')}
         onVisibleChange={action('visible')}
         multiple
       >
-        <Select.Option value="nihao" />
-        <Select.Option value="nihao2" />
-        <Select.Option value="nihao3" />
-        <Select.Option value="viking" />
-        <Select.Option value="viking2" />
+        <Option value="nihao2" />
+        <Option value="nihao" />
+        <Option value="nihao3" />
+        <Option value="viking" />
+        <Option value="viking2" />
       </Select>
+    </div>
   </Story>
 </Preview>
 
@@ -60,9 +65,9 @@ import { Select } from 'tintui'
       placeholder="禁用啦！"
       disabled
     >
-      <Select.Option value="nihao" />
-      <Select.Option value="nihao2" />
-      <Select.Option value="nihao3" />
+      <Option value="nihao" />
+      <Option value="nihao2" />
+      <Option value="nihao3" />
     </Select> 
   </Story>
 </Preview>

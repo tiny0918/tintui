@@ -177,6 +177,6 @@ export const Select:FC<SelectProps> = (props) => {
 }
 Select.defaultProps = {
   name: 'tiny-select',
-  placeholder: '请选择'
+  placeholder: '请选择',
 }
 export default Select;
