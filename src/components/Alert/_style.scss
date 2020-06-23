@@ -29,7 +29,7 @@ $alert-colors:
 }
 @each $color, $value in $alert-colors {
   .tiny-alert-#{$color} {
-    @include alert-style($value, darken($value, 5%), $white);
+    @include alert-style(darken($value, 20%), rgba($value,.2), lighten($value,25%));
   }
 }
 

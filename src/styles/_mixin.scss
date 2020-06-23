@@ -34,9 +34,9 @@
   }
 }
 
-@mixin alert-style($background, $border, $color) {
+@mixin alert-style($color, $background, $border) {
   color: $color;
-  background: $background;
+  background-color: $background;
   border-color: $border;
 }
 

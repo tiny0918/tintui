@@ -1,6 +1,8 @@
 import { Meta, Story, Props ,Preview } from '@storybook/addon-docs/blocks';
 import { action } from '@storybook/addon-actions'
-import Menu from './index'
+import Menu from './menu'
+import MenuItem from './menuItem'
+import SubMenu from './subMenu'
 
 <Meta title='TintUI|Menu' component={Menu} />
 
@@ -15,25 +17,27 @@ import { Menu } from 'tintui'
 
 <Preview >
   <Story name='default' >
+  <div style={{height:'150px'}}>
   <Menu defaultIndex='0' onSelect={action('selected!')} >
-    <Menu.Item>
+    <MenuItem>
       cool link
-    </Menu.Item>
-    <Menu.Item>
+    </MenuItem>
+    <MenuItem>
       cool link 2
-    </Menu.Item>
-    <Menu.Item disabled>
+    </MenuItem>
+    <MenuItem disabled>
       disabled
-    </Menu.Item> 
-    <Menu.SubMenu title="下拉选项">
-      <Menu.Item>
+    </MenuItem> 
+    <SubMenu title="下拉选项">
+      <MenuItem>
         下拉选项一
-      </Menu.Item>
-      <Menu.Item>
+      </MenuItem>
+      <MenuItem>
         下拉选项二
-      </Menu.Item>    
-    </Menu.SubMenu>
+      </MenuItem>    
+    </SubMenu>
   </Menu>
+    </div>
   </Story>
 </Preview>
 
@@ -42,22 +46,24 @@ import { Menu } from 'tintui'
 
 <Preview>
   <Story name='default-lg' >
+  <div style={{height:'200px'}}>
   <Menu defaultIndex='0' onSelect={action('selected!')} mode="vertical">
-    <Menu.Item>
+    <MenuItem>
       cool link
-    </Menu.Item>
-    <Menu.Item>
+    </MenuItem>
+    <MenuItem>
       cool link 2
-    </Menu.Item>
-    <Menu.SubMenu title="点击下拉选项">
-      <Menu.Item>
+    </MenuItem>
+    <SubMenu title="点击下拉选项">
+      <MenuItem>
         下拉选项一
-      </Menu.Item>
-      <Menu.Item>
+      </MenuItem>
+      <MenuItem>
         下拉选项二
-      </Menu.Item>    
-    </Menu.SubMenu>
+      </MenuItem>    
+    </SubMenu>
   </Menu>
+    </div>
   </Story>
 </Preview>
 
@@ -67,22 +73,24 @@ import { Menu } from 'tintui'
 
 <Preview>
   <Story name='defaultd' >
+  <div style={{height:'200px'}}>
   <Menu defaultIndex='0' onSelect={action('selected!')} mode="vertical" defaultOpenSubMenus={['2']}>
-    <Menu.Item>
+    <MenuItem>
       cool link
-    </Menu.Item>
-    <Menu.Item>
+    </MenuItem>
+    <MenuItem>
       cool link 2
-    </Menu.Item>
-    <Menu.SubMenu title="默认展开下拉选项">
-      <Menu.Item>
+    </MenuItem>
+    <SubMenu title="默认展开下拉选项">
+      <MenuItem>
         下拉选项一
-      </Menu.Item>
-      <Menu.Item>
+      </MenuItem>
+      <MenuItem>
         下拉选项二
-      </Menu.Item>    
-    </Menu.SubMenu>
+      </MenuItem>    
+    </SubMenu>
   </Menu>
+    </div>
   </Story>
 </Preview>
 
