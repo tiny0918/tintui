@@ -42,5 +42,5 @@ npm test
 npm run build
 
 //发布到 npm
-npm run publish
+npm publish
 ~~~

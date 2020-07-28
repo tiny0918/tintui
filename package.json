@@ -35,16 +35,16 @@
   },
   "scripts": {
     "clean": "rimraf ./dist",
-    "lint": "eslint --ext js,ts,tsx src",
-    "build": "npm run clean && npm run build-ts && npm run build-css",
-    "test": "react-scripts test",
-    "test:nowatch": "cross-env CI=true react-scripts test",
-    "storybook": "start-storybook -p 9009 -s public --docs",
-    "storybook-nodoc": "start-storybook -p 9009 -s public",
-    "build-storybook": "build-storybook --no-dll --quiet --docs",
     "build-ts": "tsc -p tsconfig.build.json",
     "build-css": "node-sass ./src/styles/index.scss ./dist/index.css",
-    "prepublishOnly": "npm run test:nowatch & npm run lint & npm run build"
+    "build": "npm run clean && npm run build-ts && npm run build-css",
+    "lint": "eslint --ext js,ts,tsx src",
+    "test": "react-scripts test",
+    "test:nowatch": "cross-env CI=true react-scripts test",
+    "prepublishOnly": "npm run test:nowatch & npm run lint & npm run build",
+    "storybook": "start-storybook -p 9009 -s public --docs",
+    "storybook-nodoc": "start-storybook -p 9009 -s public",
+    "build-storybook": "build-storybook --no-dll --quiet --docs"
   },
   "husky": {
     "hooks": {
@@ -74,6 +74,7 @@
     "@storybook/addons": "^5.3.18",
     "@storybook/preset-create-react-app": "^2.1.1",
     "@storybook/react": "5.3.18",
+    "@types/storybook__addon-info": "^5.2.1",
     "@testing-library/jest-dom": "^4.2.4",
     "@testing-library/react": "^9.3.2",
     "@types/classnames": "^2.2.9",
@@ -82,7 +83,6 @@
     "@types/react": "^16.9.13",
     "@types/react-dom": "16.9.4",
     "@types/react-transition-group": "^4.2.3",
-    "@types/storybook__addon-info": "^5.2.1",
     "cross-env": "^7.0.0",
     "husky": "^4.2.1",
     "node-sass": "^4.13.0",
