@@ -1,0 +1,42 @@
+{
+  "files": {
+    "main~24120820.css": "./static/css/main~24120820.85b4fa53.chunk.css",
+    "main~24120820.js": "./main~24120820.faf591905c5ae797c8ec.bundle.js",
+    "runtime~main.js": "./runtime~main.faf591905c5ae797c8ec.bundle.js",
+    "vendors~main~0ad7406a.js": "./vendors~main~0ad7406a.faf591905c5ae797c8ec.bundle.js",
+    "vendors~main~0decbd73.js": "./vendors~main~0decbd73.faf591905c5ae797c8ec.bundle.js",
+    "vendors~main~0f485567.js": "./vendors~main~0f485567.faf591905c5ae797c8ec.bundle.js",
+    "vendors~main~1f20a385.js": "./vendors~main~1f20a385.faf591905c5ae797c8ec.bundle.js",
+    "vendors~main~2a42e354.js": "./vendors~main~2a42e354.faf591905c5ae797c8ec.bundle.js",
+    "vendors~main~678f84af.js": "./vendors~main~678f84af.faf591905c5ae797c8ec.bundle.js",
+    "vendors~main~67b22fc5.js": "./vendors~main~67b22fc5.faf591905c5ae797c8ec.bundle.js",
+    "vendors~main~b58f7129.js": "./vendors~main~b58f7129.faf591905c5ae797c8ec.bundle.js",
+    "vendors~main~d939e436.js": "./vendors~main~d939e436.faf591905c5ae797c8ec.bundle.js",
+    "vendors~main~ec8c427e.js": "./vendors~main~ec8c427e.faf591905c5ae797c8ec.bundle.js",
+    "iframe.html": "./iframe.html",
+    "precache-manifest.2c1dbaa2f4f09aa2b8fd97362593fa10.js": "./precache-manifest.2c1dbaa2f4f09aa2b8fd97362593fa10.js",
+    "service-worker.js": "./service-worker.js",
+    "vendors~main~0ad7406a.faf591905c5ae797c8ec.bundle.js.LICENSE.txt": "./vendors~main~0ad7406a.faf591905c5ae797c8ec.bundle.js.LICENSE.txt",
+    "vendors~main~0decbd73.faf591905c5ae797c8ec.bundle.js.LICENSE.txt": "./vendors~main~0decbd73.faf591905c5ae797c8ec.bundle.js.LICENSE.txt",
+    "vendors~main~1f20a385.faf591905c5ae797c8ec.bundle.js.LICENSE.txt": "./vendors~main~1f20a385.faf591905c5ae797c8ec.bundle.js.LICENSE.txt",
+    "vendors~main~678f84af.faf591905c5ae797c8ec.bundle.js.LICENSE.txt": "./vendors~main~678f84af.faf591905c5ae797c8ec.bundle.js.LICENSE.txt",
+    "vendors~main~b58f7129.faf591905c5ae797c8ec.bundle.js.LICENSE.txt": "./vendors~main~b58f7129.faf591905c5ae797c8ec.bundle.js.LICENSE.txt",
+    "vendors~main~d939e436.faf591905c5ae797c8ec.bundle.js.LICENSE.txt": "./vendors~main~d939e436.faf591905c5ae797c8ec.bundle.js.LICENSE.txt",
+    "vendors~main~ec8c427e.faf591905c5ae797c8ec.bundle.js.LICENSE.txt": "./vendors~main~ec8c427e.faf591905c5ae797c8ec.bundle.js.LICENSE.txt"
+  },
+  "entrypoints": [
+    "runtime~main.faf591905c5ae797c8ec.bundle.js",
+    "vendors~main~0f485567.faf591905c5ae797c8ec.bundle.js",
+    "vendors~main~0decbd73.faf591905c5ae797c8ec.bundle.js",
+    "vendors~main~2a42e354.faf591905c5ae797c8ec.bundle.js",
+    "vendors~main~0ad7406a.faf591905c5ae797c8ec.bundle.js",
+    "vendors~main~d939e436.faf591905c5ae797c8ec.bundle.js",
+    "vendors~main~1f20a385.faf591905c5ae797c8ec.bundle.js",
+    "vendors~main~67b22fc5.faf591905c5ae797c8ec.bundle.js",
+    "vendors~main~b58f7129.faf591905c5ae797c8ec.bundle.js",
+    "vendors~main~678f84af.faf591905c5ae797c8ec.bundle.js",
+    "vendors~main~ec8c427e.faf591905c5ae797c8ec.bundle.js",
+    "static/css/main~24120820.85b4fa53.chunk.css",
+    "main~24120820.faf591905c5ae797c8ec.bundle.js"
+  ]
+}
