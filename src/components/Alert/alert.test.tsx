@@ -26,7 +26,7 @@ describe('test Alert Component', () => {
   it('should render the correct default Alert', () => {
     const { getByText, container, queryByText } = render(<Alert {...testProps}/>)
     expect(queryByText('title')).toBeInTheDocument()
-    expect(container.querySelector('.tiny-alert')).toHaveClass('tiny-alert-default')
+    expect(container.querySelector('.tiny-alert')).toHaveClass('tiny-alert-primary')
     fireEvent.click(getByText('times'))
     expect(testProps.onClose).toHaveBeenCalled()
     expect(queryByText('title')).not.toBeInTheDocument()
