@@ -4,33 +4,16 @@
   border-radius: $border-raduis;
 }
 
-@mixin button-style(
-  $background,
-  $border,
-  $color,
-  $hover-background: lighten($background, 7.5%),
-  $hover-border: lighten($border, 10%),
-  $hover-color: $color,
-) {
-  color: $color;
-  background: $background;
-  border-color: $border;
-  &:hover {
-    color: $hover-color;
-    background: $hover-background;
-    border-color: $hover-border;    
-  }
+@mixin button-type($value) {
+  color: darken($value, 20%);
+  background: rgba($value,.2);
+  border-color: lighten($value,15%);
+  &:hover,
   &:focus,
   &.focus {
-    color: $hover-color;
-    background: $hover-background;
-    border-color: $hover-border;    
-  }
-  &:disabled,
-  &.disabled {
-    color: $color;
-    background: $background;
-    border-color: $border;    
+    color: $white;
+    background: $value;
+    border-color: $value;    
   }
 }
 

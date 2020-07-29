@@ -1,16 +1,12 @@
-$alert-colors: 
-(
-  "default":    $primary,
-  "success":    $success,
-  "warning":    $warning,
-  "danger":     $danger,
-);
 .tiny-alert {
   position: relative;
   padding: $alert-padding-y $alert-padding-x;
   margin-bottom: $alert-margin-bottom;
   border: $alert-border-width solid transparent;
   border-radius: $alert-border-radius;
+  .bold-title {
+    font-weight: $font-weight-bold;
+  }
   .tiny-alert-close {
     position: absolute;
     top: 0;
@@ -19,17 +15,14 @@ $alert-colors:
     color: inherit;
     cursor: pointer;
   }
-  .bold-title {
-    font-weight: $font-weight-bold;
-  }
   .tiny-alert-desc {
     font-size: $alert-description-font-size;
     margin: $alert-description-top-margin 0 0;
   }
 }
-@each $color, $value in $alert-colors {
+@each $color, $value in $theme-colors {
   .tiny-alert-#{$color} {
-    @include alert-style(darken($value, 20%), rgba($value,.2), lighten($value,25%));
+    @include alert-style(darken($value, 10%), rgba($value,.2), lighten($value,20%));
   }
 }
 

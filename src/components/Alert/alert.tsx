@@ -2,19 +2,20 @@ import React, { FC, useState } from 'react'
 import classNames from 'classnames'
 import Icon from '../Icon'
 import Transition from '../Transition'
-export type AlertType = 'success' | 'default' | 'danger' | 'warning'
+
+export type AlertType = 'primary' | 'success' | 'warning' | 'danger' | 'info'
 
 export interface AlertProps {
   /**标题 */
   title: string;
   /**描述 */
   description?: string;
-  /**类型 四种可选 针对四种不同的场景 */
+  /**类型 针对五种不同的可选场景 */
   type?: AlertType;
-  /**关闭alert时触发的事件 */
-  onClose?: () => void;
   /**是否显示关闭图标*/
   closable?: boolean;
+  /**关闭alert时触发的事件 */
+  onClose?: () => void;
 }
 
 /** 
@@ -62,7 +63,7 @@ export const Alert: FC<AlertProps> = (props) => {
 }
 
 Alert.defaultProps = {
-  type: 'default',
+  type: 'primary',
   closable: true,
 }
 export default Alert;
